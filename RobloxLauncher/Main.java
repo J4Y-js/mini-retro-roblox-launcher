@@ -1,6 +1,6 @@
 import javax.swing.*;
 import javax.sound.sampled.*;
-
+import java.io.IOException;
 import java.io.File;
 import java.io.File.*;
 import java.awt.*;
@@ -23,6 +23,14 @@ public class Main {
         
         JButton launchButton = new JButton("LAUNCH ROADBLOCKS!!!");
         launchButton.setBounds(150, 275, 200, 35);
+        launchButton.addActionListener(e -> {
+    try {
+        ProcessBuilder pb = new ProcessBuilder("open", "-a", "Roblox");
+        pb.start();
+    } catch (IOException ex) {
+        ex.printStackTrace();
+    }
+});
 
         window.add(launchButton);
         window.add(background);
