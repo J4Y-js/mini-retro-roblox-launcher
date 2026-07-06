@@ -17,6 +17,10 @@ public class Main {
         background.setBounds(0, 0, 500, 400); // covers the entire window
         window.add(background);
 
+        JButton launchButton = new JButton("LAUNCH ROADBLOCKS!!!    ");
+        launchButton.setBounds(130, 130, 140, 35);
+        window.add(launchButton);
+        
         window.setVisible(true);
     }
 }
