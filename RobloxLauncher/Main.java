@@ -23,13 +23,15 @@ public class Main {
         JButton launchButton = new JButton("LAUNCH ROADBLOCKS!!!");
         launchButton.setBounds(150, 275, 200, 35);
         launchButton.addActionListener(e -> {
-    try {
-        ProcessBuilder pb = new ProcessBuilder("open", "-a", "Roblox");
-        pb.start();
-    } catch (IOException ex) {
-        ex.printStackTrace();
-    }
-});
+            launchButton.setText("YAYYY!");
+            new javax.swing.Timer(3000, evt -> launchButton.setText("LAUNCH ROADBLOCKS!!!")).start();
+            try {
+                ProcessBuilder pb = new ProcessBuilder("open", "-a", "Roblox");
+                pb.start();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         window.add(launchButton);
         window.add(background);
